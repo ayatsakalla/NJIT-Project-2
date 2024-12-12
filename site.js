@@ -27,7 +27,8 @@ const vue_app = Vue.createApp({
       created() {
             fetch('movies.json').then(response => response.json()).then(json => {
                   this.movies = json
-            })
+                  console.log(json)
+            });
       },
       data() {
             return {
