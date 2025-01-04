@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>IS219 Gallery (Project 3)</title>
+	<title>IMDB + Ayat's Top 8 Movies</title>
 
 	<!-- Our CSS File along with Boostrap, and Bootstrap Icon Styles-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,23 +37,29 @@
 
 			<div class="row">
 
-				<div class="col-md-6" v-for="(movie, index) in movies">
-					<div class="thumbnail">
+				<div class="col-md-6">
+					<div class="thumbnail" v-for="(movie, index) in movies">
 
-						<img class="poster img-fluid" />
-						<div class="imageInfo">{{ movies[index].posters}}</div>
+						<img class="poster img-fluid" v-bind:src="movies[index].posters[movies[index].posterindex]"
+							@click="posterClick(index)" />
+						<div class="imageInfo">Poster {{movies[index].posterindex + 1}} of
+							{{movies[index].posters.length}}</div>
 
 						<p class="title"> {{ movies[index].title }} ({{ movies[index].country}})</p>
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{ movies[index].iscore }} </p>
-						<p class="runtime">Runtime: {{ movies[index].runtime }}</p>
-						<p class="released">Released: {{ movies[index].released }} | Rated: {{ movies[index].rating}}
+						<p class="runtime">Runtime: {{ movies[index].runtime }} minutes</p>
+						<p class="released">Released: {{getTextDate(movies[index].released)}} | Rated: {{
+							movies[index].rating}}
 						</p>
-						<p class="websites">Websites: <a> {{ movies[index].imdb }} </a> | <a>website</a></p>
+						<p class="websites">Websites: <a v-bind:href="movies[index].imdb" target="new"> imdb </a> | <a
+								v-bind:href="movies[index].website" target="new">website</a></p>
 
 						<div class="social">
-							<p class="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{ movies[0].likes
+							<p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up"
+									aria-hidden="true"></i> {{ movies[index].likes
 								}}</p>
-							<p class="dislikes"><i class="bi bi-hand-thumbs-down"></i> {{ movies[0].dislikes }}</p>
+							<p class="dislikes" @click="dislike(index)"><i class="bi bi-hand-thumbs-down"></i> {{
+								movies[index].dislikes }}</p>
 						</div>
 					</div>
 				</div>
