@@ -6,6 +6,7 @@ body {
     width: 100%;
     overflow: auto;
     background-image: url(img/geometry.jpg);
+    font-family: "Playwrite AU SA", serif;;
 }
 
 /* This stylizes the header area */
@@ -19,7 +20,7 @@ body {
 
 /* This stylizes the main page area */
 .main {
-    background-color: #f2f2f2;
+    background-color: #ff5ccd;
     padding: 40px 0;
 }
 
@@ -30,7 +31,7 @@ body {
     padding: 20px;
     margin: 20px;
     border-radius: 0;
-    background-color:#dddddd;
+    background-color:#ffddf4;
 }
 .thumbnail img {
     margin-top: 10px;
@@ -105,6 +106,25 @@ body {
     font-weight: 200;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: 500ms;
+    color: white;
+}
+
+.likes {
+    background-color: green;
+}
+
+.dislikes {
+    background-color: red;
+}
+
+.likes:hover {
+    background-color: white;
+    color: green;
+}
+
+.dislikes:hover {
+    background-color: white;
+    color: red;
 }
 
 /* This makes sure your Github Button is centered */

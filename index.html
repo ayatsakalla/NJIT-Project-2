@@ -13,6 +13,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 	<link rel="stylesheet" type='text/css' href="style.css" />
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+
 	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
 
 	<!-- Javascript Framework (e.g., vue.js) (ADD HERE) -->
@@ -33,15 +37,15 @@
 
 		</div>
 
-		<div class="main">
+		<div class="main rounded-3">
 
 			<div class="row">
 
-				<div class="col-md-6">
-					<div class="thumbnail" v-for="(movie, index) in movies">
+				<div class="col-md-6" v-for="(movie, index) in movies">
+					<div class="thumbnail rounded-4">
 
-						<img class="poster img-fluid" v-bind:src="movies[index].posters[movies[index].posterindex]"
-							@click="posterClick(index)" />
+						<img class="poster img-fluid rounded-4"
+							v-bind:src="movies[index].posters[movies[index].posterindex]" @click="posterClick(index)" />
 						<div class="imageInfo">Poster {{movies[index].posterindex + 1}} of
 							{{movies[index].posters.length}}</div>
 
@@ -51,8 +55,8 @@
 						<p class="released">Released: {{getTextDate(movies[index].released)}} | Rated: {{
 							movies[index].rating}}
 						</p>
-						<p class="websites">Websites: <a v-bind:href="movies[index].imdb" target="new"> imdb </a> | <a
-								v-bind:href="movies[index].website" target="new">website</a></p>
+						<p class="websites">Websites: <a v-bind:href="movies[index].imdb" target="new"> IMDB </a> | <a
+								v-bind:href="movies[index].website" target="new">Movie Website</a></p>
 
 						<div class="social">
 							<p class="likes" @click="like(index)"><i class="bi bi-hand-thumbs-up"

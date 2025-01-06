@@ -56,6 +56,20 @@
             "posterindex": 0
       },
       {
+            "title": "Schindler's List",
+            "iscore": 8.9,
+            "rating": "R",
+            "runtime": 195,
+            "released": [1993, 11, 30],
+            "country": "USA",
+            "posters": ["img/schindlerslist.jpg"],
+            "imdb": "http://www.imdb.com/title/tt0108052",
+            "website": "https://www.uphe.com/schindlers-list",
+            "likes": 812,
+            "dislikes": 101,
+            "posterindex": 0
+      },
+      {
             "title": "The Notebook",
             "iscore": 7.8,
             "rating": "PG-13",
@@ -68,6 +82,34 @@
             "likes": 1356,
             "dislikes": 3,
             "posterindex": 0
+      }, 
+      {
+           "title": "Cars",
+            "iscore": 7.3,
+            "rating": "PG",
+            "runtime": 117,
+            "released": [2006, 6, 9],
+            "country": "USA",
+            "posters": ["img/cars.jpg", "img/cars2.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0317219",
+            "website": "https://cars.disney.com/cars",
+            "likes": 9595,
+            "dislikes": 1,
+            "posterindex": 0 
+      },
+      {
+            "title": "Wall-E",
+            "iscore": 8.4,
+            "rating": "PG",
+            "runtime": 98,
+            "released": [2008, 6, 27],
+            "country": "USA",
+            "posters": ["img/walle.jpg", "img/walle2.jpg", "img/walle3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0910970/",
+            "website": "https://www.pixar.com/wall-e",
+            "likes": 353,
+            "dislikes": 34,
+            "posterindex": 0 
       }
       
 ]
